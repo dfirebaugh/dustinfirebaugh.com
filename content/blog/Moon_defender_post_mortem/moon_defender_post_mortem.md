@@ -27,17 +27,15 @@ The music was loosely inspired by a game I played growing up called ["Captain Sk
 
 
 ## What could make the game more fun?
-The laser (i.e. primary fire) is a bit over used by players.  This is also the easier weapon to use.  It's a direct shot and one hit kill.
+-The laser (i.e. primary fire) is a bit over used by players.  This is also the easier weapon to use.  It's a direct shot and one hit kill.
 
-If we caused the lasers to overheat after shooting too many times in quick succession, it would force the player to use the old tech (secondary fire) more often.
+-If we caused the lasers to overheat after shooting too many times in quick succession, it would force the player to use the old tech (secondary fire) more often.
 
-I thought the gravity effect on the secondary fire was pretty interesting.  It allowed you to hook shoot a projectile around the moon and if you were skilled enough, you could produce a wall of bullets that the aliens just run into.  I guess they are an extremely determined group of aliens.
+-It would be cool if the secondary fire was an explosive on impact that would cause some AOE damage to nearby enemies. Currently, it allows you to hook shoot a projectile around the moon and if you are skilled enough, produce a wall of bullets that the aliens just run into. I guess they are an extremely determined group of aliens.
 
-It would be cool if the secondary fire was an explosive on impact that would cause some AOE damage to nearby enemies.
+-Upgradeable weapons and power ups.
 
-Upgradeable weapons and power ups...
-
-The story line mode was a little too easy.
+-Make the story line mode more challenging.
 
 ## UX Improvements
 In story mode, you get a little carried away clicking the alien ships to blast them to oblivion.  However, if the level ends, the cut screen comes up and the control to advance past the cut screen is the same mouse click that you're obliterating enemies with.  So, it's easy to miss the cut screen.  Not that they are particularly high quality cut screens.
