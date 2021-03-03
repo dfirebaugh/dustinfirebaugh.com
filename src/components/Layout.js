@@ -26,6 +26,13 @@ class Layout extends React.Component {
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
+          <style>
+            {`
+              ul {
+                margin-left: 2em;
+              }
+            `}
+          </style>
         </div>
       </>
     )
