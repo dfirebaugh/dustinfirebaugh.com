@@ -137,8 +137,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
-              theme: 'synthwave',
-              terminal: 'none'
+              terminal: 'none',
+              theme: 'synthwave'
             }
           },
         ],

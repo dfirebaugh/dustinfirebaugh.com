@@ -29,7 +29,7 @@ function Bio() {
             />
             <p>
               Written by <strong>{author}</strong> who lives and works in
-              Cincinnati. He likes building software and help people learn!
+              Richmond, VA. He likes building software and help people learn!
               <Link style={{ marginLeft: '1em' }} to={`/mailing_list`}>
                 You should sign up for the mailing list!
               </Link>
