@@ -19,6 +19,10 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         {posts.map(({ node }) => {
+          if (!Boolean(node.fields)) {
+            return <></>
+          }
+          
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
