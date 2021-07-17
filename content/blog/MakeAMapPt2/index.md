@@ -9,10 +9,10 @@ excerpt: 'A dev log of a simple 2d tile based map editor?'
 # Recap
 Checkout [the previous post](../LetsMakeAMapEditor/)
 
-Previouis commit: [0b0527d](https://github.com/dfirebaugh/bananamap/tree/0b0527dfd5b32e2a7158574ca676aa4e66a4d548)
+Previous commit: [0b0527d](https://github.com/dfirebaugh/bananamap/tree/0b0527dfd5b32e2a7158574ca676aa4e66a4d548)
 
 # Performance issue
-In the previous code session, I was creating gridlines on every render.  This is causing the app to run unneccessarily slow.
+In the previous code session, I was creating grid lines on every render.  This is causing the app to run unnecessarily slow.
 
 We can fix this by splitting the creation of the lines from the drawing of the lines.
 e.g.
@@ -41,10 +41,10 @@ func drawGrid(lines []Line) {
 
 We then call the `initGrid` function up front and the `drawGrid` function on every render (i.e. in the main Draw function).
 
-There's now a slight issue that it takes a while to load and it doesn't tell the user that it's loading/initializing.  I could process these gridlines more concurrently to mitigate this or just add a "loading..." message to communicate to the user that the app isn't broken.  I will deal this later.
+There's now a slight issue that it takes a while to load and it doesn't tell the user that it's loading/initializing.  I could process these grid lines more concurrently to mitigate this or just add a "loading..." message to communicate to the user that the app isn't broken.  I will deal this later.
 
 # Panning issue
-The function that managed user input for panning the tilemap was having an issue that would make the tilemap reset to origin on first mouse button press.
+The function that managed user input for panning the tile map was having an issue that would make the tile map reset to origin on first mouse button press.
 
 The fix for this was to relatively adjust the offset and to update the start position always (even if the mouse button isn't pressed).
 
