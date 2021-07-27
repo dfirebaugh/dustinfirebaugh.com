@@ -69,7 +69,7 @@ highly available off-the-shelf parts:
 * esp8266
 * RFID-RC522
 
-![esp8266-rfid](https://github.com/HackRVA/memberdashboard/blob/main/resources/rfidreader/docs/basic_diagram.PNG)
+![esp8266-rfid](https://github.com/HackRVA/memberdashboard/blob/main/resources/rfidreader/docs/basic_diagram.PNG?raw=true)
 
 I started prototyping a solution using the esp8266 in this 
 [repo](https://github.com/HackRVA/memberdashboard/tree/main/resources/rfidreader).  The main principal of this prototype was that it stored an Access List locally and would sync with a server to make sure that access list was up to date.  The server would handle integration with the payment provider to automatically determine if memberships have expired.  This allows the RFID device to still grant access without relying on a network connection. Sending a web request would likely cause some delay and it's not guaranteed to be available.
