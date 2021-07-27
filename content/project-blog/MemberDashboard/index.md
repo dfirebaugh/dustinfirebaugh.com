@@ -6,42 +6,26 @@ tags: ['Member_Dashboard', 'makerspace', 'rfid']
 excerpt: 'Makerspace rfid fob system'
 ---
 # High Level
-The Problem with physical keys is that it's difficult to verify that someone returned their key if they stopped paying for membership.
+This project was made to benefit [Hackrva](https://hackrva.org).
+
+When a new member joins hackrva, they start a subscription without payment gateway/provider.  We then verify this and give them a physical key.
+The problem with physical keys is that it's difficult to verify that someone returned their key if they stopped paying for membership.
 
 An RFID fob system allows us to give someone a key and revoke access whenever we need to.
 We should be able to automate this based on whether or not a member has paid.
 
+The Member Dashboard is a web service that keeps track of membership status for hackrva members.  Based on membership status and which groups a member is in, their RFID fob will be given access to specific RFID readers.
+
 ## Repo
 https://github.com/HackRVA/memberdashboard
 
-### Technologies
-#### Golang
-[Golang](https://golang.org/) is used for backend code.
+## Technologies
 
-some notable libraries used: 
-* [gorilla/mux](github.com/gorilla/mux) web server
-* [go-guardian](github.com/shaj13/go-guardian) auth
-* [paho.mqtt.golang](github.com/eclipse/paho.mqtt.golang) mqtt
-
-#### lit-element
-[lit-element](https://lit-element.polymer-project.org/guide) used for frontend.  lit-element is a library that makes it easy to create web components.
-
-This was a pretty cool way to make a frontend.  We were able to avoid using a frontend framework entirely.  This does take a bit of discipline to keep things clean, but we ended up with very lightweight fully encapsulated custom components.  The result is a fairly snappy UI.
-
-We also took advantage of [rxjs](https://rxjs.dev/) to make our http requests.
-
-#### MQTT
-[MQTT](https://mqtt.org/) is the pub/sub protocol used to communicate with devices on the network.
-
-#### PostgresQL
-[postgres](https://www.postgresql.org/) Database
-
-#### mosquitto
-We are using [mosquitto](https://mosquitto.org/) as an MQTT broker.
-
-#### Docker
-Docker is used as a CI/CD pipeline.
-We are also now using a docker dev container to make it easy to have a consistent dev environment.  See the README in the repo for more details.
+| Technology      | note |
+| ----------- | ----------- |
+| [Golang](https://golang.org/)      | backend       |
+| [lit-element](https://lit-element.polymer-project.org/guide)   | a library that makes it easy to create web components |
+| [MQTT](https://mqtt.org/)      | pub/sub protocol used to communicate with devices on the network       |
 
 # Requirements
 * Pull down member information from the payment provider
