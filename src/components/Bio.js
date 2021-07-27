@@ -28,11 +28,31 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in
+              Written by <strong>{author}</strong> of 
               Richmond, VA. He likes building software and helping people learn!
-              <Link style={{ marginLeft: '1em' }} to={`/mailing_list`}>
-                You should sign up for the mailing list!
-              </Link>
+              <ul>
+                <li>
+                  <Link to={`https://paypal.me/DustinFirebaugh?locale.x=en_US`} >
+                    buy me a coffee ☕
+                  </Link>
+                </li>
+                <li>
+                  <span>
+                    send me ₿itcoin: bc1qeeshssgf59e96qqcc2lscqep7n3t35rkqpcda4
+                  </span>
+                </li>
+                <li>
+                  <Link  to={`/mailing_list`}>
+                    sign up for the mailing list!
+                  </Link>
+                </li>
+                <li>
+                  Found a problem with this site? 
+                  <Link to={`https://github.com/dfirebaugh/dustinfirebaugh.com/issues`}>
+                    submit an issue here
+                  </Link>
+                </li>
+              </ul>
             </p>
           </div>
         )
