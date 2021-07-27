@@ -7,7 +7,7 @@ excerpt: 'A dev log of a simple 2d tile based map editor?'
 ---
 
 # Recap
-Checkout [the previous post](../MakeAMapPt3)
+Checkout [the previous post](../MapEditorPt3)
 
 Previous commit: [e52241f](https://github.com/dfirebaugh/bananamap/commit/e52241f8e95a38f19f274636de3aaaf9eb12d935)
 
