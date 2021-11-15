@@ -14,11 +14,15 @@ function Header({ title }) {
       to: `/blog`,
     },
     {
+      Text: 'Second-Brain',
+      to: "https://brain.dustinfirebaugh.com/"
+    },
+    {
       Text: 'About',
       to: `/about`,
     },
     {
-      Text: 'Mailing List',
+      Text: 'Mailing-List',
       to: `/mailing_list`,
     },
   ]
