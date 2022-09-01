@@ -2,6 +2,7 @@
 - [Intro](./intro.md)
 - [About](./about.md)
 - [Projects](./projects.md)
+    - [Turtle](./projects/turtle.md)
     - [HackRVA RFID Solution](./project-blog/MemberDashboard/index.md)
     - [FlipBit](./project-blog/flipbit/index.md)
     - [Atari Punk Console](./project-blog/Atari_Punk_Console/index.md)
