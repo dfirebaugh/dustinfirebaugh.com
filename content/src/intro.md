@@ -1,7 +1,6 @@
 # Welcome
 There's nothing super official here.  It's just a site for me to have some digital content in a central place.
 
-## Links
 
 | name | description |
 | ---- | ----------- |
