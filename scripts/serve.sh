@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! command -v mdbok
+if ! command -v mdbook
 then
     source ./scripts/download-mdbook.sh
     alias mdbook=bin/mdbook
