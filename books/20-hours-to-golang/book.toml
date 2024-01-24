@@ -1,0 +1,10 @@
+[book]
+authors = ["Dustin Firebaugh"]
+language = "en"
+multilingual = false
+src = "src"
+title = "20 Hours To Golang"
+
+[output.html]
+default-theme="navy"
+site-url="/dustinfirebaugh.com/20-hours-to-golang/"

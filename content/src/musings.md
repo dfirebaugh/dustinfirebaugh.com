@@ -1,4 +1,6 @@
-"Musings" are kind of my way to practice writing.  
+
+# Musings
+Musings are kind of my way to practice writing.  
 
 - [My HackRVA Origin Story](./blog/My_HackRVA_Origin_Story/index.md)
 - [What Makes Games Fun?](./blog/pacman/index.md)

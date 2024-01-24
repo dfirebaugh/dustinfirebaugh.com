@@ -1,3 +1,7 @@
+
+build:
+	bash ./scripts/build.sh
+
 serve:
 	bash ./scripts/serve.sh
 
