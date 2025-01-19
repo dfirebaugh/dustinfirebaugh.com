@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html lang="en" class="navy" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>What Makes Games Fun? - dustinfirebaugh</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item expanded "><a href="../../about.html"><strong aria-hidden="true">2.</strong> About</a></li><li class="chapter-item expanded "><a href="../../projects.html"><strong aria-hidden="true">3.</strong> Projects</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../projects/punch.html"><strong aria-hidden="true">3.1.</strong> Punch</a></li><li class="chapter-item expanded "><a href="../../projects/no_build_js.html"><strong aria-hidden="true">3.2.</strong> No Build Frontends</a></li><li class="chapter-item expanded "><a href="../../projects/turtle.html"><strong aria-hidden="true">3.3.</strong> Turtle</a></li><li class="chapter-item expanded "><a href="../../project-blog/MemberDashboard/index.html"><strong aria-hidden="true">3.4.</strong> HackRVA RFID Solution</a></li><li class="chapter-item expanded "><a href="../../project-blog/flipbit/index.html"><strong aria-hidden="true">3.5.</strong> FlipBit</a></li><li class="chapter-item expanded "><a href="../../project-blog/Atari_Punk_Console/index.html"><strong aria-hidden="true">3.6.</strong> Atari Punk Console</a></li><li class="chapter-item expanded "><a href="../../projects/shuffle_board.html"><strong aria-hidden="true">3.7.</strong> Modular Shuffleboard Table</a></li><li class="chapter-item expanded "><a href="../../projects/crocheted_beard.html"><strong aria-hidden="true">3.8.</strong> Crocheted Beard</a></li><li class="chapter-item expanded "><a href="../../projects/coptic_book.html"><strong aria-hidden="true">3.9.</strong> Coptic Bound Scarab Journal</a></li><li class="chapter-item expanded "><a href="../../project-blog/luggable/index.html"><strong aria-hidden="true">3.10.</strong> Luggable</a></li><li class="chapter-item expanded "><a href="../../project-blog/J46k/index.html"><strong aria-hidden="true">3.11.</strong> j46k</a></li><li class="chapter-item expanded "><a href="../../projects/checkout_lines.html"><strong aria-hidden="true">3.12.</strong> Tiny Checkout Lines</a></li><li class="chapter-item expanded "><a href="../../projects/studio_build.html"><strong aria-hidden="true">3.13.</strong> Studio Build</a></li><li class="chapter-item expanded "><a href="../../projects/wikilickers.html"><strong aria-hidden="true">3.14.</strong> WikiLickers</a></li><li class="chapter-item expanded "><a href="../../project-blog/Makers_Unplugged/index.html"><strong aria-hidden="true">3.15.</strong> Makers Unplugged</a></li><li class="chapter-item expanded "><a href="../../project-blog/hrva_classroom/index.html"><strong aria-hidden="true">3.16.</strong> HackRVA Classroom</a></li><li class="chapter-item expanded "><a href="../../project-blog/HackRVA_Sign/index.html"><strong aria-hidden="true">3.17.</strong> HackRVA Sign</a></li></ol></li><li class="chapter-item expanded "><a href="../../musings.html"><strong aria-hidden="true">4.</strong> Musings</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../blog/My_HackRVA_Origin_Story/index.html"><strong aria-hidden="true">4.1.</strong> My HackRVA Origin Story</a></li><li class="chapter-item expanded "><a href="../../blog/pacman/index.html" class="active"><strong aria-hidden="true">4.2.</strong> What Makes Games Fun?</a></li><li class="chapter-item expanded "><a href="../../blog/Self_Taught/index.html"><strong aria-hidden="true">4.3.</strong> Self Taught</a></li><li class="chapter-item expanded "><a href="../../blog/SecondBrain/index.html"><strong aria-hidden="true">4.4.</strong> Second Brain</a></li><li class="chapter-item expanded "><a href="../../blog/PICO-8/index.html"><strong aria-hidden="true">4.5.</strong> Pico-8</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">dustinfirebaugh</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="what-makes-games-fun"><a class="header" href="#what-makes-games-fun">What makes games fun?</a></h1>
+<p><img src="https://wallpapercave.com/wp/VEWGjcP.jpg" alt="pacman_pills" /></p>
+<h2 id="how-do-you-make-a-game-fun"><a class="header" href="#how-do-you-make-a-game-fun">How do you make a game fun?</a></h2>
+<p>Before reading this, it might be worthwhile to pretend that you are the game design lead on the project (i.e. <a href="https://en.wikipedia.org/wiki/Pac-Man">Pacman</a>) and you're primary task is to make this game fun.</p>
+<p>How would you implement the AI?
+(let's not even think about how you would code it...)
+Perhaps a better way to phrase it, what behaviors would you give each ghost? How do these decisions affect how fun the game is?
+Can you optimize for fun?</p>
+<p>I think it's difficult enough to just think about how to make the game
+playable. Making the game fun is an entirely different thought process.</p>
+<p>Turns out, these ghosts behave in a very intentional way. Maybe we can shed some light on their behavior and take a swing at the answer to the question, &quot;How do you make a game fun?&quot;</p>
+<h2 id="ghosts"><a class="header" href="#ghosts">Ghosts</a></h2>
+<p>The ghosts have 2 states in the game.</p>
+<p>When the player eats a pill (I guess that's what we call it), the ghosts flee.</p>
+<p>When not in this fleeing state, the player is free to chomp along eating the tasty dots on the screen. In this state the ghosts are in pursuit mode. In pursuit mode each ghost has its own unique behavior.</p>
+<p>At the beginning of the game, the ghosts go to their respective corners. I assume this gives the player a bit of time to get their bearings. It's possibly an illusion of safety.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/en/5/51/Pacman_title_na.png" alt="ghosts" /></p>
+<h3 id="shadow----blinky"><a class="header" href="#shadow----blinky">SHADOW -- &quot;BLINKY&quot;</a></h3>
+<p>RED</p>
+<p>BLINKY is the chaser. BLINKY simply chases Pacman.</p>
+<h3 id="speedy----pinky"><a class="header" href="#speedy----pinky">SPEEDY -- &quot;PINKY&quot;</a></h3>
+<p>PINK</p>
+<p>PINKY is the ambusher. PINKY aims for the position in front (or a few positions ahead) of Pacman's mouth.</p>
+<h3 id="bashful----inky"><a class="header" href="#bashful----inky">BASHFUL -- &quot;INKY&quot;</a></h3>
+<p>BLUE</p>
+<p>INKY is the fickle ghost. INKY is supposed to get near the player, but keep its distance. However, INKY sometimes adopts the behavior of the other ghosts.</p>
+<h3 id="pokey----clyde"><a class="header" href="#pokey----clyde">POKEY -- &quot;CLYDE&quot;</a></h3>
+<p>ORANGE</p>
+<p>CLYDE is supposed to be random. However, CLYDE seems to behave like the red ghost when it is some distance away from the player. When it gets too close to the player CLYDE moves toward the lower left corner.</p>
+<p>One interesting note here is that the red ghost is following/chasing the player. So the red ghost will almost always be behind the player. However the pink ghost aims ahead of the player. Effectively performing a pincer move to trap the player.</p>
+<p>This ends up looking like a strange dance.</p>
+<p><img src="https://media.giphy.com/media/d9QiBcfzg64Io/giphy.gif" alt="pacman-gif" /></p>
+<h2 id="so-what-makes-a-game-fun"><a class="header" href="#so-what-makes-a-game-fun">So, What makes a game fun?</a></h2>
+<p>In pacman, you aren't really given many instructions. The game just kind of starts and the pacman starts moving... chomp chomp chomp...
+The player quickly works out that the goal is to clear the board. Well, the goal is to gain as many points as possible. You just happen to gain points by eating the little Pac-dots. How does the player know that the ghosts are enemies. It might take an unfortunate loss of life to learn that. Or, the player might realize just by the fact that the ghosts are chasing the player. Another interesting question -- how does the player know that they can eat the ghosts when they consume a pill? Well, I think it has to do with the drastic behavior change. After eating the pill, the ghosts turn blue and start fleeing from the player. Perhaps it has something to do with that weird looking frowny face the ghosts make when you eat that pill. Maybe they just look edible. Maybe it's that Pacman only has one mode, to eat (ah, solidarity!). What is the player to do other than chase the ghosts. Oh, that gives you points too! The player begins strategizing by tracking the ghosts movements while planning their own routes to collect as many Pac-dots as possible...</p>
+<p>So, what makes the game fun?</p>
+<p>On first play some of the fun comes from discovering how the game works, but the player soon becomes an expert at the game. Unless there's a factor of randomness. We don't see much randomness in Pacman (aside from some random behaviors of the ghosts). Pacman typically just increases in difficulty as the game progresses.</p>
+<p>Difficulty by itself does not make a game fun.</p>
+<p>Too difficult, it's not fun.</p>
+<p>Too easy, it's not fun.</p>
+<p>Even at the goldy-locks level of difficulty, it doesn't guarantee that the game will be fun. There's a balance between many variables that might add up to &quot;how much fun&quot; a game is.</p>
+<p>Some of those variables:</p>
+<ul>
+<li><a href="http://game-wisdom.com/critical/progression-gameplay">progression</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Symmetric_game">symmetry</a></li>
+<li><a href="https://www.gamasutra.com/blogs/FabianFischer/20141201/231243/Criteria_for_Strategy_Game_Design.php">strategy</a></li>
+<li><a href="https://www.gamecareerguide.com/features/1470/design_101_the_role_of_randomness.php">randomness</a></li>
+</ul>
+<p>There's also a bit of an external factor with pacman. In the day, arcade games were also a spectator sport. I don't think it's common that your first time playing pacman was the first time you've seen the game. You probably already knew how the game worked by watching others play and thinking in your head &quot;I could do that&quot;. ... and there reveals another factor of fun, competition.</p>
+<p>The truth is, it's hard to know how to make a game fun and finding the right balance is part of the art. That's why <a href="https://schoolofgamedesign.com/project/play-test-game-design/">playtesting</a> is so important.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../blog/My_HackRVA_Origin_Story/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../blog/Self_Taught/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../blog/My_HackRVA_Origin_Story/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../blog/Self_Taught/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

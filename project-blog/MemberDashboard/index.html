@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="en" class="navy" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>HackRVA RFID Solution - dustinfirebaugh</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../intro.html"><strong aria-hidden="true">1.</strong> Intro</a></li><li class="chapter-item expanded "><a href="../../about.html"><strong aria-hidden="true">2.</strong> About</a></li><li class="chapter-item expanded "><a href="../../projects.html"><strong aria-hidden="true">3.</strong> Projects</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../projects/punch.html"><strong aria-hidden="true">3.1.</strong> Punch</a></li><li class="chapter-item expanded "><a href="../../projects/no_build_js.html"><strong aria-hidden="true">3.2.</strong> No Build Frontends</a></li><li class="chapter-item expanded "><a href="../../projects/turtle.html"><strong aria-hidden="true">3.3.</strong> Turtle</a></li><li class="chapter-item expanded "><a href="../../project-blog/MemberDashboard/index.html" class="active"><strong aria-hidden="true">3.4.</strong> HackRVA RFID Solution</a></li><li class="chapter-item expanded "><a href="../../project-blog/flipbit/index.html"><strong aria-hidden="true">3.5.</strong> FlipBit</a></li><li class="chapter-item expanded "><a href="../../project-blog/Atari_Punk_Console/index.html"><strong aria-hidden="true">3.6.</strong> Atari Punk Console</a></li><li class="chapter-item expanded "><a href="../../projects/shuffle_board.html"><strong aria-hidden="true">3.7.</strong> Modular Shuffleboard Table</a></li><li class="chapter-item expanded "><a href="../../projects/crocheted_beard.html"><strong aria-hidden="true">3.8.</strong> Crocheted Beard</a></li><li class="chapter-item expanded "><a href="../../projects/coptic_book.html"><strong aria-hidden="true">3.9.</strong> Coptic Bound Scarab Journal</a></li><li class="chapter-item expanded "><a href="../../project-blog/luggable/index.html"><strong aria-hidden="true">3.10.</strong> Luggable</a></li><li class="chapter-item expanded "><a href="../../project-blog/J46k/index.html"><strong aria-hidden="true">3.11.</strong> j46k</a></li><li class="chapter-item expanded "><a href="../../projects/checkout_lines.html"><strong aria-hidden="true">3.12.</strong> Tiny Checkout Lines</a></li><li class="chapter-item expanded "><a href="../../projects/studio_build.html"><strong aria-hidden="true">3.13.</strong> Studio Build</a></li><li class="chapter-item expanded "><a href="../../projects/wikilickers.html"><strong aria-hidden="true">3.14.</strong> WikiLickers</a></li><li class="chapter-item expanded "><a href="../../project-blog/Makers_Unplugged/index.html"><strong aria-hidden="true">3.15.</strong> Makers Unplugged</a></li><li class="chapter-item expanded "><a href="../../project-blog/hrva_classroom/index.html"><strong aria-hidden="true">3.16.</strong> HackRVA Classroom</a></li><li class="chapter-item expanded "><a href="../../project-blog/HackRVA_Sign/index.html"><strong aria-hidden="true">3.17.</strong> HackRVA Sign</a></li></ol></li><li class="chapter-item expanded "><a href="../../musings.html"><strong aria-hidden="true">4.</strong> Musings</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../blog/My_HackRVA_Origin_Story/index.html"><strong aria-hidden="true">4.1.</strong> My HackRVA Origin Story</a></li><li class="chapter-item expanded "><a href="../../blog/pacman/index.html"><strong aria-hidden="true">4.2.</strong> What Makes Games Fun?</a></li><li class="chapter-item expanded "><a href="../../blog/Self_Taught/index.html"><strong aria-hidden="true">4.3.</strong> Self Taught</a></li><li class="chapter-item expanded "><a href="../../blog/SecondBrain/index.html"><strong aria-hidden="true">4.4.</strong> Second Brain</a></li><li class="chapter-item expanded "><a href="../../blog/PICO-8/index.html"><strong aria-hidden="true">4.5.</strong> Pico-8</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">dustinfirebaugh</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="member-dashboard"><a class="header" href="#member-dashboard">Member Dashboard</a></h1>
+<h1 id="high-level"><a class="header" href="#high-level">High Level</a></h1>
+<p>This project was made to benefit <a href="https://hackrva.org">Hackrva</a>.</p>
+<p>When a new member joins hackrva, they start a subscription without payment gateway/provider.  We then verify this and give them a physical key.
+The problem with physical keys is that it's difficult to verify that someone returned their key if they stopped paying for membership.</p>
+<p>An RFID fob system allows us to give someone a key and revoke access whenever we need to.
+We should be able to automate this based on whether or not a member has paid.</p>
+<p>The Member Dashboard is a web service that keeps track of membership status for hackrva members.  Based on membership status and which groups a member is in, their RFID fob will be given access to specific RFID readers.</p>
+<h2 id="repo"><a class="header" href="#repo">Repo</a></h2>
+<p>https://github.com/HackRVA/memberdashboard</p>
+<h2 id="technologies"><a class="header" href="#technologies">Technologies</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Technology</th><th>note</th></tr></thead><tbody>
+<tr><td><a href="https://golang.org/">Golang</a></td><td>backend</td></tr>
+<tr><td><a href="https://lit-element.polymer-project.org/guide">lit-element</a></td><td>a library that makes it easy to create web components</td></tr>
+<tr><td><a href="https://mqtt.org/">MQTT</a></td><td>pub/sub protocol used to communicate with devices on the network</td></tr>
+</tbody></table>
+</div>
+<h1 id="requirements"><a class="header" href="#requirements">Requirements</a></h1>
+<ul>
+<li>Pull down member information from the payment provider</li>
+<li>keep a database that knows which members are active</li>
+<li>sync up with RFID device so that member access is up to date with the automation on the server</li>
+<li>allow for different groups and the ability to add different RFID devices that have different Access Control Lists (ACLs)</li>
+<li>allow leadership to credit a membership</li>
+<li>automatically determine different membership levels</li>
+<li>send notifications that membership is going to expire and membership is entering a grace period</li>
+<li>keep track of connection status of RFID devices</li>
+<li>don't be dependant on the network for gaining access.  Network access isn't garunteed.</li>
+<li>be able to determine if an ACL on a device is out of date.</li>
+<li>allow members to self serve their RFID tag (if they lose it, they can replace it themselves if necessary)</li>
+<li>be able to manually revoke a members access</li>
+</ul>
+<h1 id="make-vs-buy"><a class="header" href="#make-vs-buy">Make vs Buy</a></h1>
+<p>Finding a preexisting solution that would meet all of our integration needs would be difficult.
+Primarily, we need something that would hook up to the Paypal API and pull down active subscriptions to determine a members status.</p>
+<p>Typically if you go to a vendor for this kind of solution, they will want to charge a subscription fee for the service.  These vendor solutions are typically very manual. You have to manually give someone a badge/fob and manually revoke it when the time comes.  Since hackrva is a member ran organization (i.e. nobody works there), it's harder rely on humans to push the right buttons when the time comes. Automation is highly preferred.
+Also, I've seen several scenarios where the manufacturer of RFID devices go out of business and you become stuck with a device with limited support.</p>
+<p>The initial thought was to build this with highly available off the shelf parts. 
+highly available off-the-shelf parts:</p>
+<ul>
+<li>esp8266</li>
+<li>RFID-RC522</li>
+</ul>
+<p><img src="https://github.com/HackRVA/memberdashboard/blob/main/resources/rfidreader/docs/basic_diagram.PNG?raw=true" alt="esp8266-rfid" /></p>
+<p>I started prototyping a solution using the esp8266 in this 
+<a href="https://github.com/HackRVA/memberdashboard/tree/main/resources/rfidreader">repo</a>.  The main principal of this prototype was that it stored an Access List locally and would sync with a server to make sure that access list was up to date.  The server would handle integration with the payment provider to automatically determine if memberships have expired.  This allows the RFID device to still grant access without relying on a network connection. Sending a web request would likely cause some delay and it's not guaranteed to be available.</p>
+<p>This worked well in concept, but it would have taken a fair amount of time and there was plenty of work to be done on the server solution.  While I was working on this, I discovered an open source project that had a reasonably mature codebase and several people were already using it.  It seemed to meet most of our needs for the device and they offer a reasonably priced PCB that you can just buy.  The PCB (printed circuit board) isn't an off the shelf part, but if we needed to, we could build it from scratch using an esp8266, a RC-522 RFID reader, and a small relay.
+<a href="https://github.com/esprfid/esp-rfid">esprfid</a></p>
+<h1 id="hardware-installation"><a class="header" href="#hardware-installation">Hardware Installation</a></h1>
+<p>The PCB made the hardware installation fairly simple.  Since the RFID reader is a separate device, I had to route copper wire from the esp8266 PCB through the door (to the outside) and to the RFID reader (the RC-522).  we could have had the PCB outside the door, but this would have allowed someone to open the faceplate and bridge a few connections to gain access.  The RFID reader communicates with the eps8266 PCB via a digital connection.  So, it's much harder than just bridging some connections to break in.</p>
+<h1 id="buzzer"><a class="header" href="#buzzer">Buzzer</a></h1>
+<p>After installing the RFID reader, I noticed people were swiping several times before actually opening the door.  I attributed this toward the fact that there was no feedback given to the user.  There was nothing telling them that their swipe was successful.  I added a piezo buzzer that activated when a successful swipe was made.  It's a subtle beep, but now it's fairly uncommon for someone to swipe more than once before they open the door.</p>
+<h1 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h1>
+<p>This project is continuously developed so as we find more things to improve or integrate, we write some code and it gets deployed immediately.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../projects/turtle.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../project-blog/flipbit/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../projects/turtle.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../project-blog/flipbit/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
