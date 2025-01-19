@@ -5,6 +5,7 @@ source ./scripts/build.sh
 GIT_REPO_URL=$(git config --get remote.origin.url)
 
 cd .dist/web/
+echo dustinfirebaugh.com >> CNAME
 git init .
 git remote add github $GIT_REPO_URL
 git checkout -b gh-pages
