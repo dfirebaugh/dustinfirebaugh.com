@@ -2,6 +2,8 @@
 - [Intro](./intro.md)
 - [About](./about.md)
 - [Projects](./projects.md)
+    - [Punch](./projects/punch.md)
+    - [No Build Frontends](./projects/no_build_js.md)
     - [Turtle](./projects/turtle.md)
     - [HackRVA RFID Solution](./project-blog/MemberDashboard/index.md)
     - [FlipBit](./project-blog/flipbit/index.md)

@@ -7,4 +7,4 @@ then
 fi
 
 # mdbook serve content/20-hours-to-golang -p 3333 --open
-mdbook serve content -p 3333 --open
+./bin/mdbook serve content -p 3333 --open
